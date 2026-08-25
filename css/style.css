@@ -562,3 +562,105 @@ a {
         transform: rotate(90deg);
     }
 }
+
+
+/* Step 7: final integrated navigation and footer */
+.menu-toggle {
+    display: none;
+    border: 1px solid #dfe6ef;
+    border-radius: 9px;
+    padding: 8px 11px;
+    background: #ffffff;
+    color: #12213a;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.site-nav a {
+    white-space: nowrap;
+}
+
+.site-nav a:hover,
+.footer-nav a:hover {
+    color: #1264d8;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.footer-brand {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.footer-grid p {
+    margin: 0;
+    color: #aebbd0;
+    font-size: 14px;
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 12px 22px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+@media (max-width: 900px) {
+    .menu-toggle {
+        display: inline-flex;
+    }
+
+    .header-inner {
+        position: relative;
+    }
+
+    .site-nav {
+        display: none;
+        position: absolute;
+        top: 58px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        padding: 10px;
+        border: 1px solid #e3e9f1;
+        border-radius: 12px;
+        background: #ffffff;
+        box-shadow: 0 18px 40px rgba(12, 18, 32, 0.12);
+    }
+
+    .site-nav.is-open {
+        display: flex;
+    }
+
+    .site-nav a {
+        padding: 11px 12px;
+        border-radius: 8px;
+    }
+
+    .site-nav a:hover {
+        background: #f5f8fc;
+    }
+}
+
+@media (max-width: 760px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        text-align: center;
+    }
+
+    .footer-nav {
+        justify-content: center;
+    }
+}

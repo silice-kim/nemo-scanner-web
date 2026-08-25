@@ -1,12 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const playStoreButtons = document.querySelectorAll(".play-store-cta");
+    const menuToggle = document.querySelector(".menu-toggle");
+    const siteNav = document.querySelector(".site-nav");
 
-    playStoreButtons.forEach((button) => {
+    if (menuToggle && siteNav) {
+        menuToggle.addEventListener("click", () => {
+            const isOpen = siteNav.classList.toggle("is-open");
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        siteNav.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+                siteNav.classList.remove("is-open");
+                menuToggle.setAttribute("aria-expanded", "false");
+            });
+        });
+    }
+
+    document.querySelectorAll(".play-store-cta").forEach((button) => {
         button.addEventListener("click", () => {
-            const page = button.dataset.page || "unknown";
-
             console.log("play_store_click", {
-                page
+                page: button.dataset.page || "unknown"
             });
         });
     });

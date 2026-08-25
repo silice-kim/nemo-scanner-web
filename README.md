@@ -2,19 +2,43 @@
 
 Marketing website for **Barcode & QR Scanner: Nemo**.
 
+Live site:
+
+https://silice-kim.github.io/nemo-scanner-web/
+
 Google Play:
 
 https://play.google.com/store/apps/details?id=kr.co.bizadmin.scanner
 
-## Step 1
+## Day 24 final / Step 7
 
-This step includes:
+Implemented:
 
-- Home page
-- Responsive layout
-- Google Play CTA
-- Feature overview
-- Basic JavaScript event hook
+- Responsive home page
+- Continuous Scan SEO landing page
+- CSV Export SEO landing page
+- Scan from Image SEO landing page
+- Scan History SEO landing page
+- ZXing Intent developer landing page
+- Unified desktop/mobile navigation
+- Unified footer and internal links
+- Google Play CTA tracking attributes
+- Page-specific titles and meta descriptions
+- Canonical URLs using the live GitHub Pages domain
+- Open Graph title, description, URL and site name
+- `robots.txt`
+- `sitemap.xml`
+- `404.html`
+- Removal of temporary “coming next” copy
+
+## Pages
+
+- `/`
+- `/continuous-barcode-scanner/`
+- `/barcode-scanner-csv-export/`
+- `/scan-qr-from-image/`
+- `/barcode-scanner-history/`
+- `/zxing-intent-scanner/`
 
 ## Local preview
 
@@ -22,102 +46,25 @@ This step includes:
 python3 -m http.server 8000
 ```
 
-Then open:
+Open:
 
 ```text
-http://localhost:8000
+http://localhost:8000/
 ```
 
+## Deployment check
 
-## Step 2
+After pushing to GitHub, verify:
 
-Added:
+- `https://silice-kim.github.io/nemo-scanner-web/`
+- `https://silice-kim.github.io/nemo-scanner-web/robots.txt`
+- `https://silice-kim.github.io/nemo-scanner-web/sitemap.xml`
+- all five landing pages
+- Google Play CTA links
+- mobile navigation
+- 404 handling
 
-- `/continuous-barcode-scanner/`
-- Continuous Scan SEO landing page
-- Homepage card linked to the landing page
-- Page-specific Google Play CTA tracking attribute
+## Important developer note
 
-Preview:
-
-```text
-http://localhost:8000/continuous-barcode-scanner/
-```
-
-
-## Step 3
-
-Added:
-
-- `/barcode-scanner-csv-export/`
-- CSV Export SEO landing page
-- Homepage CSV Export card linked to the new page
-- Continuous Scan → CSV Export internal link
-- CSV Export → Continuous Scan internal link
-- `data-page="csv_export"` on Google Play CTAs
-
-Preview:
-
-```text
-http://localhost:8000/barcode-scanner-csv-export/
-```
-
-
-## Step 4
-
-Added:
-
-- `/scan-qr-from-image/`
-- Scan from Image SEO landing page
-- Homepage Image Scan card linked to the new page
-- Internal links between existing feature pages
-- `data-page="image_scan"` on Google Play CTAs
-
-Preview:
-
-```text
-http://localhost:8000/scan-qr-from-image/
-```
-
-
-## Step 5
-
-Added:
-
-- `/barcode-scanner-history/`
-- Scan History SEO landing page
-- Homepage Scan History card linked to the new page
-- Internal links from Continuous Scan, CSV Export and Image Scan
-- History page links back to related feature pages
-- `data-page="history"` on Google Play CTAs
-
-Preview:
-
-```text
-http://localhost:8000/barcode-scanner-history/
-```
-
-
-## Step 6
-
-Added:
-
-- `/zxing-intent-scanner/`
-- ZXing Intent developer SEO landing page
-- Homepage ZXing Intent feature card linked to the developer page
-- Homepage Developers section linked to the developer page
-- Android integration flow
-- Safe placeholder code examples for the Intent pattern
-- Internal links from existing feature pages
-- `data-page="zxing_intent"` on Google Play CTAs
-
-Important:
-
-The code example intentionally uses placeholder Intent action and result keys.
-Replace them only with the exact contract supported by the current Nemo app.
-
-Preview:
-
-```text
-http://localhost:8000/zxing-intent-scanner/
-```
+The ZXing Intent page contains placeholder Intent action/result keys.
+Replace those placeholders only with the exact contract supported by the current Nemo app.

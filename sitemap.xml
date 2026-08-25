@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://silice-kim.github.io/nemo-scanner-web/</loc>
+    </url>
+    <url>
+        <loc>https://silice-kim.github.io/nemo-scanner-web/continuous-barcode-scanner/</loc>
+    </url>
+    <url>
+        <loc>https://silice-kim.github.io/nemo-scanner-web/barcode-scanner-csv-export/</loc>
+    </url>
+    <url>
+        <loc>https://silice-kim.github.io/nemo-scanner-web/scan-qr-from-image/</loc>
+    </url>
+    <url>
+        <loc>https://silice-kim.github.io/nemo-scanner-web/barcode-scanner-history/</loc>
+    </url>
+    <url>
+        <loc>https://silice-kim.github.io/nemo-scanner-web/zxing-intent-scanner/</loc>
+    </url>
+</urlset>
