@@ -4,14 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Barcode Scanner with Scan History for Android | Nemo</title>
-    <meta name="description" content="Save, search and review barcode and QR scan history on Android with Nemo. Keep previous scan results available when you need them again.">
-
+    <title>Barcode Scan History & Management | Nemo</title>
+    <meta name="description" content="Manage, search, and copy barcode and QR scan logs on Android with Nemo history feature.">
 
     <link rel="canonical" href="https://nemo-scanner.bizadmin.co.kr/barcode-scanner-history/">
+    <link rel="alternate" hreflang="x-default" href="https://nemo-scanner.bizadmin.co.kr/barcode-scanner-history/">
+    <link rel="alternate" hreflang="en" href="https://nemo-scanner.bizadmin.co.kr/barcode-scanner-history/?lang=en">
+    <link rel="alternate" hreflang="ko" href="https://nemo-scanner.bizadmin.co.kr/barcode-scanner-history/?lang=ko">
+    <link rel="alternate" hreflang="ja" href="https://nemo-scanner.bizadmin.co.kr/barcode-scanner-history/?lang=ja">
+    <link rel="alternate" hreflang="de" href="https://nemo-scanner.bizadmin.co.kr/barcode-scanner-history/?lang=de">
+    <link rel="alternate" hreflang="es" href="https://nemo-scanner.bizadmin.co.kr/barcode-scanner-history/?lang=es">
+    <link rel="alternate" hreflang="fr" href="https://nemo-scanner.bizadmin.co.kr/barcode-scanner-history/?lang=fr">
+    <link rel="alternate" hreflang="pt" href="https://nemo-scanner.bizadmin.co.kr/barcode-scanner-history/?lang=pt">
+    <link rel="alternate" hreflang="zh-CN" href="https://nemo-scanner.bizadmin.co.kr/barcode-scanner-history/?lang=zh-CN">
+    <link rel="alternate" hreflang="zh-TW" href="https://nemo-scanner.bizadmin.co.kr/barcode-scanner-history/?lang=zh-TW">
 
-    <meta property="og:title" content="Barcode Scanner with Scan History for Android | Nemo">
-    <meta property="og:description" content="Save, search and review barcode and QR scan history on Android with Nemo. Keep previous scan results available when you need them again.">
+    <meta property="og:title" content="Barcode Scan History & Management | Nemo">
+    <meta property="og:description" content="Manage, search, and copy barcode and QR scan logs on Android with Nemo history feature.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nemo-scanner.bizadmin.co.kr/barcode-scanner-history/">
     <meta property="og:site_name" content="Nemo">
@@ -19,7 +28,7 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body>
+<body data-i18n-page-title="hist_page_title">
 
 <header class="site-header">
     <div class="container header-inner">
@@ -30,11 +39,11 @@
         </button>
 
         <nav class="nav site-nav">
-            <a href="../continuous-barcode-scanner/">Continuous</a>
-            <a href="../barcode-scanner-csv-export/">CSV Export</a>
-            <a href="../scan-qr-from-image/">Image Scan</a>
-            <a href="../barcode-scanner-history/">History</a>
-            <a href="../zxing-intent-scanner/">Developers</a>
+            <a href="../continuous-barcode-scanner/" data-i18n="nav_continuous">Continuous</a>
+            <a href="../barcode-scanner-csv-export/" data-i18n="nav_csv">CSV Export</a>
+            <a href="../scan-qr-from-image/" data-i18n="nav_image">Image Scan</a>
+            <a href="../barcode-scanner-history/" data-i18n="nav_history">History</a>
+            <a href="../zxing-intent-scanner/" data-i18n="nav_developers">Developers</a>
         </nav>
     </div>
 </header>
@@ -44,19 +53,16 @@
     <section class="page-hero">
         <div class="container page-hero-inner">
 
-            <a href="../" class="back-home">← Back to Nemo</a>
+            <a href="../" class="back-home" data-i18n="nav_home">← Back to Nemo</a>
 
-            <p class="eyebrow">Barcode Scanner History</p>
+            <p class="eyebrow" data-i18n="feat_history_title">Scan History</p>
 
-            <h1>
-                Keep and search
-                your barcode scan history.
+            <h1 data-i18n="hist_hero_title">
+                Barcode & QR scan history management.
             </h1>
 
-            <p>
-                A scan result can be useful long after the first scan.
-                Nemo keeps previous barcode and QR results available
-                so you can review and search them again later.
+            <p data-i18n="hist_hero_desc">
+                Never lose a scanned code. Review, search, filter, and manage your complete scanning log anytime.
             </p>
 
             <div class="page-hero-actions">
@@ -66,67 +72,10 @@
                     href="https://play.google.com/store/apps/details?id=kr.co.bizadmin.scanner"
                     target="_blank"
                     rel="noopener noreferrer"
+                    data-i18n="get_nemo"
                 >
-                    Keep Your Scan History with Nemo
+                    View History with Nemo
                 </a>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="content-section">
-        <div class="container content-narrow">
-
-            <p class="eyebrow">The problem</p>
-
-            <h2>
-                Scanning again is not always the best way to find the same result
-            </h2>
-
-            <p>
-                If you scan a product code, QR link or asset label today,
-                you may need that result again later.
-                Without history, the only option may be finding and scanning
-                the original code again.
-            </p>
-
-            <div class="workflow-row" style="margin-top: 34px;">
-                <div class="workflow-item">Scan</div>
-                <div class="workflow-arrow">→</div>
-                <div class="workflow-item">Use Result</div>
-                <div class="workflow-arrow">→</div>
-                <div class="workflow-item">Need It Again</div>
-                <div class="workflow-arrow">→</div>
-                <div class="workflow-item">Scan Again</div>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="content-section workflow-section">
-        <div class="container content-narrow">
-
-            <p class="eyebrow">The solution</p>
-
-            <h2>
-                Save the result once and find it again later
-            </h2>
-
-            <p>
-                Nemo keeps previous scan results in history.
-                This makes it easier to review earlier scans,
-                search for a saved value and continue working
-                without repeating the original scan.
-            </p>
-
-            <div class="workflow-row" style="margin-top: 34px;">
-                <div class="workflow-item">Scan</div>
-                <div class="workflow-arrow">→</div>
-                <div class="workflow-item">Save</div>
-                <div class="workflow-arrow">→</div>
-                <div class="workflow-item">Search</div>
-                <div class="workflow-arrow">→</div>
-                <div class="workflow-item">Reuse</div>
             </div>
 
         </div>
@@ -136,85 +85,23 @@
         <div class="container">
 
             <div class="section-heading">
-                <p class="eyebrow">Use cases</p>
-                <h2>Useful when scan results matter after the moment of scanning</h2>
+                <p class="eyebrow">Features</p>
+                <h2 data-i18n="hist_feat1_title">Search & Filter</h2>
+                <p data-i18n="hist_feat1_desc">Quickly find previous scans by value, date, or format.</p>
             </div>
 
-            <div class="use-case-grid">
-
-                <article class="use-case-card">
-                    <h3>Product lookup</h3>
-                    <p>
-                        Return to a barcode you scanned earlier
-                        without locating the physical label again.
-                    </p>
-                </article>
-
-                <article class="use-case-card">
-                    <h3>QR links</h3>
-                    <p>
-                        Revisit a previously scanned QR result
-                        when you need the link again later.
-                    </p>
-                </article>
-
-                <article class="use-case-card">
-                    <h3>Work records</h3>
-                    <p>
-                        Keep repeated scan activity together
-                        before exporting or reviewing the collected data.
-                    </p>
-                </article>
-
+            <div class="section-heading" style="margin-top: 48px;">
+                <h2 data-i18n="hist_feat2_title">Quick Copy & Share</h2>
+                <p data-i18n="hist_feat2_desc">Copy scanned text to clipboard or share directly with team members.</p>
             </div>
-
-        </div>
-    </section>
-
-    <section class="content-section workflow-section">
-        <div class="container content-narrow">
-
-            <p class="eyebrow">Related features</p>
-
-            <h2>
-                History connects scanning with real workflows
-            </h2>
-
-            <p>
-                Use Continuous Scan when you need to collect many results,
-                then keep those results in history and export them to CSV
-                when you need to work with the data elsewhere.
-            </p>
-
-            <div class="related-links">
-                <a href="../continuous-barcode-scanner/">
-                    Learn about Continuous Scan →
-                </a>
-
-                <a href="../barcode-scanner-csv-export/">
-                    Export scan results to CSV →
-                </a>
-
-                <a href="../scan-qr-from-image/">
-                    Scan QR codes from saved images →
-                </a>
-            
-                <a href="../zxing-intent-scanner/">
-                    ZXing Intent integration →
-                </a>
-</div>
 
         </div>
     </section>
 
     <section class="section final-cta">
         <div class="container">
-
-            <h2>Want to keep the results you scan?</h2>
-
-            <p>
-                Save, search and review barcode and QR scan history with Nemo.
-            </p>
+            <h2 data-i18n="cta_title">Ready to start scanning?</h2>
+            <p data-i18n="cta_desc">Try Barcode & QR Scanner: Nemo on Android.</p>
 
             <a
                 class="button button-primary play-store-cta"
@@ -222,10 +109,10 @@
                 href="https://play.google.com/store/apps/details?id=kr.co.bizadmin.scanner"
                 target="_blank"
                 rel="noopener noreferrer"
+                data-i18n="get_nemo"
             >
                 Get Nemo on Google Play
             </a>
-
         </div>
     </section>
 
@@ -235,20 +122,23 @@
     <div class="container footer-grid">
         <div>
             <strong class="footer-brand">Nemo</strong>
-            <p>Barcode & QR Scanner for Android</p>
+            <p data-i18n="eyebrow">Barcode & QR Scanner for Android</p>
+            <p data-i18n="footer_rights">All rights reserved.</p>
         </div>
 
         <nav class="footer-nav" aria-label="Footer navigation">
-            <a href="../continuous-barcode-scanner/">Continuous Scan</a>
-            <a href="../barcode-scanner-csv-export/">CSV Export</a>
-            <a href="../scan-qr-from-image/">Image Scan</a>
-            <a href="../barcode-scanner-history/">Scan History</a>
-            <a href="../zxing-intent-scanner/">ZXing Intent</a>
+            <a href="../continuous-barcode-scanner/" data-i18n="nav_continuous">Continuous Scan</a>
+            <a href="../barcode-scanner-csv-export/" data-i18n="nav_csv">CSV Export</a>
+            <a href="../scan-qr-from-image/" data-i18n="nav_image">Image Scan</a>
+            <a href="../barcode-scanner-history/" data-i18n="nav_history">Scan History</a>
+            <a href="../zxing-intent-scanner/" data-i18n="nav_developers">ZXing Intent</a>
         </nav>
     </div>
 </footer>
 
 <script src="../js/main.js"></script>
+<script src="../js/translations.js"></script>
+<script src="../js/i18n.js"></script>
 
 </body>
 </html>

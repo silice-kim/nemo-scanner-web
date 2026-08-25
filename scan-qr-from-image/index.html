@@ -4,21 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Scan QR Codes from Images on Android | Nemo</title>
-    <meta name="description" content="Scan QR codes and barcodes from saved images on Android with Nemo. Select an image from your device and read the code directly.">
-
+    <title>Scan Barcode & QR Code from Image Files | Nemo</title>
+    <meta name="description" content="Read QR codes and barcodes directly from saved images, photos, or screenshots on Android using Nemo scanner.">
 
     <link rel="canonical" href="https://nemo-scanner.bizadmin.co.kr/scan-qr-from-image/">
+    <link rel="alternate" hreflang="x-default" href="https://nemo-scanner.bizadmin.co.kr/scan-qr-from-image/">
+    <link rel="alternate" hreflang="en" href="https://nemo-scanner.bizadmin.co.kr/scan-qr-from-image/?lang=en">
+    <link rel="alternate" hreflang="ko" href="https://nemo-scanner.bizadmin.co.kr/scan-qr-from-image/?lang=ko">
+    <link rel="alternate" hreflang="ja" href="https://nemo-scanner.bizadmin.co.kr/scan-qr-from-image/?lang=ja">
+    <link rel="alternate" hreflang="de" href="https://nemo-scanner.bizadmin.co.kr/scan-qr-from-image/?lang=de">
+    <link rel="alternate" hreflang="es" href="https://nemo-scanner.bizadmin.co.kr/scan-qr-from-image/?lang=es">
+    <link rel="alternate" hreflang="fr" href="https://nemo-scanner.bizadmin.co.kr/scan-qr-from-image/?lang=fr">
+    <link rel="alternate" hreflang="pt" href="https://nemo-scanner.bizadmin.co.kr/scan-qr-from-image/?lang=pt">
+    <link rel="alternate" hreflang="zh-CN" href="https://nemo-scanner.bizadmin.co.kr/scan-qr-from-image/?lang=zh-CN">
+    <link rel="alternate" hreflang="zh-TW" href="https://nemo-scanner.bizadmin.co.kr/scan-qr-from-image/?lang=zh-TW">
 
-    <meta property="og:title" content="Scan QR Codes from Images on Android | Nemo">
-    <meta property="og:description" content="Scan QR codes and barcodes from saved images on Android with Nemo. Select an image from your device and read the code directly.">
+    <meta property="og:title" content="Scan Barcode & QR Code from Image Files | Nemo">
+    <meta property="og:description" content="Read QR codes and barcodes directly from saved images, photos, or screenshots on Android using Nemo scanner.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nemo-scanner.bizadmin.co.kr/scan-qr-from-image/">
     <meta property="og:site_name" content="Nemo">
 
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+
+<body data-i18n-page-title="img_page_title">
 
 <header class="site-header">
     <div class="container header-inner">
@@ -29,11 +39,11 @@
         </button>
 
         <nav class="nav site-nav">
-            <a href="../continuous-barcode-scanner/">Continuous</a>
-            <a href="../barcode-scanner-csv-export/">CSV Export</a>
-            <a href="../scan-qr-from-image/">Image Scan</a>
-            <a href="../barcode-scanner-history/">History</a>
-            <a href="../zxing-intent-scanner/">Developers</a>
+            <a href="../continuous-barcode-scanner/" data-i18n="nav_continuous">Continuous</a>
+            <a href="../barcode-scanner-csv-export/" data-i18n="nav_csv">CSV Export</a>
+            <a href="../scan-qr-from-image/" data-i18n="nav_image">Image Scan</a>
+            <a href="../barcode-scanner-history/" data-i18n="nav_history">History</a>
+            <a href="../zxing-intent-scanner/" data-i18n="nav_developers">Developers</a>
         </nav>
     </div>
 </header>
@@ -42,18 +52,18 @@
 
     <section class="page-hero">
         <div class="container page-hero-inner">
-            <a href="../" class="back-home">← Back to Nemo</a>
-            <p class="eyebrow">Scan QR from Image</p>
 
-            <h1>
-                Scan QR codes directly
+            <a href="../" class="back-home" data-i18n="nav_home">← Back to Nemo</a>
+
+            <p class="eyebrow" data-i18n="feat_image_title">Image Scan</p>
+
+            <h1 data-i18n="img_hero_title">
+                Scan barcodes & QR codes
                 from saved images.
             </h1>
 
-            <p>
-                Already have a QR code or barcode saved as an image?
-                Choose the image on your Android device and let Nemo read
-                the code without pointing the camera at another screen.
+            <p data-i18n="img_hero_desc">
+                Upload photos, screenshots, or saved images to detect barcodes and QR codes without needing a physical item in front of the camera.
             </p>
 
             <div class="page-hero-actions">
@@ -63,123 +73,36 @@
                     href="https://play.google.com/store/apps/details?id=kr.co.bizadmin.scanner"
                     target="_blank"
                     rel="noopener noreferrer"
+                    data-i18n="get_nemo"
                 >
-                    Scan Images with Nemo
+                    Try Image Scanning with Nemo
                 </a>
             </div>
-        </div>
-    </section>
 
-    <section class="content-section">
-        <div class="container content-narrow">
-            <p class="eyebrow">The problem</p>
-            <h2>The QR code is already on your phone</h2>
-            <p>
-                Sometimes a QR code arrives as a screenshot, downloaded image
-                or picture shared through another app. In that situation,
-                using the camera alone can be inconvenient because the code
-                and the scanner are on the same device.
-            </p>
-
-            <div class="workflow-row" style="margin-top: 34px;">
-                <div class="workflow-item">Saved Image</div>
-                <div class="workflow-arrow">→</div>
-                <div class="workflow-item">Need Another Screen?</div>
-                <div class="workflow-arrow">→</div>
-                <div class="workflow-item">Camera Scan</div>
-            </div>
-        </div>
-    </section>
-
-    <section class="content-section workflow-section">
-        <div class="container content-narrow">
-            <p class="eyebrow">The solution</p>
-            <h2>Select the image and scan it directly</h2>
-            <p>
-                Nemo can read supported QR codes and barcodes from images
-                stored on your Android device. Select an image and process
-                the code directly from the file.
-            </p>
-
-            <div class="workflow-row" style="margin-top: 34px;">
-                <div class="workflow-item">Image</div>
-                <div class="workflow-arrow">→</div>
-                <div class="workflow-item">Select</div>
-                <div class="workflow-arrow">→</div>
-                <div class="workflow-item">Detect</div>
-                <div class="workflow-arrow">→</div>
-                <div class="workflow-item">Result</div>
-            </div>
         </div>
     </section>
 
     <section class="content-section">
         <div class="container">
+
             <div class="section-heading">
-                <p class="eyebrow">Use cases</p>
-                <h2>Useful when the code is already digital</h2>
+                <p class="eyebrow">Features</p>
+                <h2 data-i18n="img_feat1_title">Gallery & File Support</h2>
+                <p data-i18n="img_feat1_desc">Select images directly from device storage or photo library.</p>
             </div>
 
-            <div class="use-case-grid">
-                <article class="use-case-card">
-                    <h3>Screenshots</h3>
-                    <p>
-                        Read a QR code captured in a screenshot
-                        without moving the image to another device.
-                    </p>
-                </article>
-
-                <article class="use-case-card">
-                    <h3>Downloaded images</h3>
-                    <p>
-                        Select an image saved on your phone
-                        and detect the barcode or QR code inside it.
-                    </p>
-                </article>
-
-                <article class="use-case-card">
-                    <h3>Shared images</h3>
-                    <p>
-                        Process codes received as image files
-                        from messages, documents or other workflows.
-                    </p>
-                </article>
+            <div class="section-heading" style="margin-top: 48px;">
+                <h2 data-i18n="img_feat2_title">High Detection Rate</h2>
+                <p data-i18n="img_feat2_desc">Accurately decodes low-light, blurry, or small barcodes in photos.</p>
             </div>
-        </div>
-    </section>
 
-    <section class="content-section workflow-section">
-        <div class="container content-narrow">
-            <p class="eyebrow">Related features</p>
-            <h2>Use the result after scanning</h2>
-            <p>
-                Nemo also supports workflows for repeated scanning
-                and exporting collected scan results.
-            </p>
-
-            <div class="related-links">
-                <a href="../continuous-barcode-scanner/">
-                    Learn about Continuous Scan →
-                </a>
-                <a href="../barcode-scanner-csv-export/">
-                    Export scan results to CSV →
-                </a>
-
-                <a href="../barcode-scanner-history/">
-                    Keep and search scan history →
-                </a>
-            
-                <a href="../zxing-intent-scanner/">
-                    ZXing Intent integration →
-                </a>
-</div>
         </div>
     </section>
 
     <section class="section final-cta">
         <div class="container">
-            <h2>Have a QR code saved as an image?</h2>
-            <p>Open the image with Nemo and scan the code directly.</p>
+            <h2 data-i18n="cta_title">Ready to start scanning?</h2>
+            <p data-i18n="cta_desc">Try Barcode & QR Scanner: Nemo on Android.</p>
 
             <a
                 class="button button-primary play-store-cta"
@@ -187,6 +110,7 @@
                 href="https://play.google.com/store/apps/details?id=kr.co.bizadmin.scanner"
                 target="_blank"
                 rel="noopener noreferrer"
+                data-i18n="get_nemo"
             >
                 Get Nemo on Google Play
             </a>
@@ -199,19 +123,23 @@
     <div class="container footer-grid">
         <div>
             <strong class="footer-brand">Nemo</strong>
-            <p>Barcode & QR Scanner for Android</p>
+            <p data-i18n="eyebrow">Barcode & QR Scanner for Android</p>
+            <p data-i18n="footer_rights">All rights reserved.</p>
         </div>
 
         <nav class="footer-nav" aria-label="Footer navigation">
-            <a href="../continuous-barcode-scanner/">Continuous Scan</a>
-            <a href="../barcode-scanner-csv-export/">CSV Export</a>
-            <a href="../scan-qr-from-image/">Image Scan</a>
-            <a href="../barcode-scanner-history/">Scan History</a>
-            <a href="../zxing-intent-scanner/">ZXing Intent</a>
+            <a href="../continuous-barcode-scanner/" data-i18n="nav_continuous">Continuous Scan</a>
+            <a href="../barcode-scanner-csv-export/" data-i18n="nav_csv">CSV Export</a>
+            <a href="../scan-qr-from-image/" data-i18n="nav_image">Image Scan</a>
+            <a href="../barcode-scanner-history/" data-i18n="nav_history">Scan History</a>
+            <a href="../zxing-intent-scanner/" data-i18n="nav_developers">ZXing Intent</a>
         </nav>
     </div>
 </footer>
 
 <script src="../js/main.js"></script>
+<script src="../js/translations.js"></script>
+<script src="../js/i18n.js"></script>
+
 </body>
 </html>

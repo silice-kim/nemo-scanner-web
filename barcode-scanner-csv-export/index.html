@@ -4,14 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Barcode Scanner with CSV Export for Android | Nemo</title>
-    <meta name="description" content="Scan barcodes on Android and export scan results to CSV with Nemo. Keep scan data organized and use it in spreadsheet workflows.">
-
+    <title>Barcode Scanner with CSV Export | Nemo</title>
+    <meta name="description" content="Export barcode and QR scan results to CSV format with Nemo for Android. Easily integrate scan logs with Excel and Google Sheets.">
 
     <link rel="canonical" href="https://nemo-scanner.bizadmin.co.kr/barcode-scanner-csv-export/">
+    <link rel="alternate" hreflang="x-default" href="https://nemo-scanner.bizadmin.co.kr/barcode-scanner-csv-export/">
+    <link rel="alternate" hreflang="en" href="https://nemo-scanner.bizadmin.co.kr/barcode-scanner-csv-export/?lang=en">
+    <link rel="alternate" hreflang="ko" href="https://nemo-scanner.bizadmin.co.kr/barcode-scanner-csv-export/?lang=ko">
+    <link rel="alternate" hreflang="ja" href="https://nemo-scanner.bizadmin.co.kr/barcode-scanner-csv-export/?lang=ja">
+    <link rel="alternate" hreflang="de" href="https://nemo-scanner.bizadmin.co.kr/barcode-scanner-csv-export/?lang=de">
+    <link rel="alternate" hreflang="es" href="https://nemo-scanner.bizadmin.co.kr/barcode-scanner-csv-export/?lang=es">
+    <link rel="alternate" hreflang="fr" href="https://nemo-scanner.bizadmin.co.kr/barcode-scanner-csv-export/?lang=fr">
+    <link rel="alternate" hreflang="pt" href="https://nemo-scanner.bizadmin.co.kr/barcode-scanner-csv-export/?lang=pt">
+    <link rel="alternate" hreflang="zh-CN" href="https://nemo-scanner.bizadmin.co.kr/barcode-scanner-csv-export/?lang=zh-CN">
+    <link rel="alternate" hreflang="zh-TW" href="https://nemo-scanner.bizadmin.co.kr/barcode-scanner-csv-export/?lang=zh-TW">
 
-    <meta property="og:title" content="Barcode Scanner with CSV Export for Android | Nemo">
-    <meta property="og:description" content="Scan barcodes on Android and export scan results to CSV with Nemo. Keep scan data organized and use it in spreadsheet workflows.">
+    <meta property="og:title" content="Barcode Scanner with CSV Export | Nemo">
+    <meta property="og:description" content="Export barcode and QR scan results to CSV format with Nemo for Android. Easily integrate scan logs with Excel and Google Sheets.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nemo-scanner.bizadmin.co.kr/barcode-scanner-csv-export/">
     <meta property="og:site_name" content="Nemo">
@@ -19,7 +28,7 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body>
+<body data-i18n-page-title="csv_page_title">
 
 <header class="site-header">
     <div class="container header-inner">
@@ -30,11 +39,11 @@
         </button>
 
         <nav class="nav site-nav">
-            <a href="../continuous-barcode-scanner/">Continuous</a>
-            <a href="../barcode-scanner-csv-export/">CSV Export</a>
-            <a href="../scan-qr-from-image/">Image Scan</a>
-            <a href="../barcode-scanner-history/">History</a>
-            <a href="../zxing-intent-scanner/">Developers</a>
+            <a href="../continuous-barcode-scanner/" data-i18n="nav_continuous">Continuous</a>
+            <a href="../barcode-scanner-csv-export/" data-i18n="nav_csv">CSV Export</a>
+            <a href="../scan-qr-from-image/" data-i18n="nav_image">Image Scan</a>
+            <a href="../barcode-scanner-history/" data-i18n="nav_history">History</a>
+            <a href="../zxing-intent-scanner/" data-i18n="nav_developers">Developers</a>
         </nav>
     </div>
 </header>
@@ -44,19 +53,19 @@
     <section class="page-hero">
         <div class="container page-hero-inner">
 
-            <a href="../" class="back-home">← Back to Nemo</a>
+            <a href="../" class="back-home" data-i18n="nav_home">← Back to Nemo</a>
 
-            <p class="eyebrow">Barcode Scanner CSV Export</p>
+            <p class="eyebrow" data-i18n="feat_csv_title">CSV Export</p>
 
-            <h1>
-                Scan barcodes and
-                export results to CSV.
+            <h1 data-i18n="csv_hero_title">
+                Export barcode scan results
+                directly to CSV.
             </h1>
 
-            <p>
-                Scanning is often only the first step.
-                Nemo lets you keep scan results and export them as a CSV file
-                so the data can be used in spreadsheet and work processes.
+            <p data-i18n="csv_hero_desc">
+                Scanning codes is only half the work.
+                Nemo lets you export your scan history into CSV files,
+                making it easy to work with Excel, Google Sheets, or internal inventory tools.
             </p>
 
             <div class="page-hero-actions">
@@ -66,66 +75,10 @@
                     href="https://play.google.com/store/apps/details?id=kr.co.bizadmin.scanner"
                     target="_blank"
                     rel="noopener noreferrer"
+                    data-i18n="get_nemo"
                 >
-                    Export Scan Results with Nemo
+                    Export Scan History with Nemo
                 </a>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="content-section">
-        <div class="container content-narrow">
-
-            <p class="eyebrow">The problem</p>
-
-            <h2>
-                Barcode data becomes useful when you can use it after scanning
-            </h2>
-
-            <p>
-                A barcode scanner can identify a code quickly,
-                but repetitive work often requires more than seeing the result
-                on the screen. You may need to collect many scan results,
-                organize them and continue working with the data later.
-            </p>
-
-            <div class="workflow-row" style="margin-top: 34px;">
-                <div class="workflow-item">Scan</div>
-                <div class="workflow-arrow">→</div>
-                <div class="workflow-item">Result</div>
-                <div class="workflow-arrow">→</div>
-                <div class="workflow-item">Manual Copy</div>
-                <div class="workflow-arrow">→</div>
-                <div class="workflow-item">Spreadsheet</div>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="content-section workflow-section">
-        <div class="container content-narrow">
-
-            <p class="eyebrow">The solution</p>
-
-            <h2>
-                Keep your scan results and export them as CSV
-            </h2>
-
-            <p>
-                Nemo combines scanning, scan history and CSV export
-                so collected barcode and QR results can move into
-                a spreadsheet-friendly workflow.
-            </p>
-
-            <div class="workflow-row" style="margin-top: 34px;">
-                <div class="workflow-item">Scan</div>
-                <div class="workflow-arrow">→</div>
-                <div class="workflow-item">History</div>
-                <div class="workflow-arrow">→</div>
-                <div class="workflow-item">CSV</div>
-                <div class="workflow-arrow">→</div>
-                <div class="workflow-item">Spreadsheet</div>
             </div>
 
         </div>
@@ -135,81 +88,23 @@
         <div class="container">
 
             <div class="section-heading">
-                <p class="eyebrow">Use cases</p>
-                <h2>Turn scan results into usable data</h2>
+                <p class="eyebrow">Features</p>
+                <h2 data-i18n="csv_feat1_title">One-Click Export</h2>
+                <p data-i18n="csv_feat1_desc">Generate clean CSV files containing timestamps, barcode data, and formats instantly.</p>
             </div>
 
-            <div class="use-case-grid">
-
-                <article class="use-case-card">
-                    <h3>Inventory lists</h3>
-                    <p>
-                        Collect product codes during stock checks
-                        and move the results into a spreadsheet workflow.
-                    </p>
-                </article>
-
-                <article class="use-case-card">
-                    <h3>Asset records</h3>
-                    <p>
-                        Keep scanned asset labels together
-                        instead of copying each value manually.
-                    </p>
-                </article>
-
-                <article class="use-case-card">
-                    <h3>Field collection</h3>
-                    <p>
-                        Gather multiple codes on Android
-                        and export the collected scan data later.
-                    </p>
-                </article>
-
+            <div class="section-heading" style="margin-top: 48px;">
+                <h2 data-i18n="csv_feat2_title">Inventory Ready</h2>
+                <p data-i18n="csv_feat2_desc">Compatible with standard spreadsheet software for inventory auditing and reporting.</p>
             </div>
-
-        </div>
-    </section>
-
-    <section class="content-section workflow-section">
-        <div class="container content-narrow">
-
-            <p class="eyebrow">Related feature</p>
-
-            <h2>
-                Collect more results with Continuous Scan
-            </h2>
-
-            <p>
-                If your workflow involves many barcodes,
-                Continuous Scan can reduce repeated navigation
-                while CSV Export helps you use the collected results afterward.
-            </p>
-
-            <div class="related-links">
-                <a href="../continuous-barcode-scanner/">
-                    Learn about Continuous Scan →
-                </a>
-                <a href="../scan-qr-from-image/">
-                    Scan QR codes from saved images →
-                </a>
-                <a href="../barcode-scanner-history/">Keep and search scan history →</a>
-            
-                <a href="../zxing-intent-scanner/">
-                    ZXing Intent integration →
-                </a>
-</div>
 
         </div>
     </section>
 
     <section class="section final-cta">
         <div class="container">
-
-            <h2>Need your scan results outside the scanner?</h2>
-
-            <p>
-                Scan, keep and export barcode data with Nemo.
-            </p>
+            <h2 data-i18n="cta_title">Ready to start scanning?</h2>
+            <p data-i18n="cta_desc">Try Barcode & QR Scanner: Nemo on Android.</p>
 
             <a
                 class="button button-primary play-store-cta"
@@ -217,10 +112,10 @@
                 href="https://play.google.com/store/apps/details?id=kr.co.bizadmin.scanner"
                 target="_blank"
                 rel="noopener noreferrer"
+                data-i18n="get_nemo"
             >
                 Get Nemo on Google Play
             </a>
-
         </div>
     </section>
 
@@ -230,20 +125,23 @@
     <div class="container footer-grid">
         <div>
             <strong class="footer-brand">Nemo</strong>
-            <p>Barcode & QR Scanner for Android</p>
+            <p data-i18n="eyebrow">Barcode & QR Scanner for Android</p>
+            <p data-i18n="footer_rights">All rights reserved.</p>
         </div>
 
         <nav class="footer-nav" aria-label="Footer navigation">
-            <a href="../continuous-barcode-scanner/">Continuous Scan</a>
-            <a href="../barcode-scanner-csv-export/">CSV Export</a>
-            <a href="../scan-qr-from-image/">Image Scan</a>
-            <a href="../barcode-scanner-history/">Scan History</a>
-            <a href="../zxing-intent-scanner/">ZXing Intent</a>
+            <a href="../continuous-barcode-scanner/" data-i18n="nav_continuous">Continuous Scan</a>
+            <a href="../barcode-scanner-csv-export/" data-i18n="nav_csv">CSV Export</a>
+            <a href="../scan-qr-from-image/" data-i18n="nav_image">Image Scan</a>
+            <a href="../barcode-scanner-history/" data-i18n="nav_history">Scan History</a>
+            <a href="../zxing-intent-scanner/" data-i18n="nav_developers">ZXing Intent</a>
         </nav>
     </div>
 </footer>
 
 <script src="../js/main.js"></script>
+<script src="../js/translations.js"></script>
+<script src="../js/i18n.js"></script>
 
 </body>
 </html>

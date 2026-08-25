@@ -2,20 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://nemo-scanner.bizadmin.co.kr/</loc>
+        <priority>1.0</priority>
     </url>
     <url>
         <loc>https://nemo-scanner.bizadmin.co.kr/continuous-barcode-scanner/</loc>
+        <priority>0.8</priority>
     </url>
     <url>
         <loc>https://nemo-scanner.bizadmin.co.kr/barcode-scanner-csv-export/</loc>
+        <priority>0.8</priority>
     </url>
     <url>
         <loc>https://nemo-scanner.bizadmin.co.kr/scan-qr-from-image/</loc>
+        <priority>0.8</priority>
     </url>
     <url>
         <loc>https://nemo-scanner.bizadmin.co.kr/barcode-scanner-history/</loc>
+        <priority>0.8</priority>
     </url>
     <url>
         <loc>https://nemo-scanner.bizadmin.co.kr/zxing-intent-scanner/</loc>
+        <priority>0.8</priority>
     </url>
 </urlset>

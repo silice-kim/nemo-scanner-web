@@ -664,3 +664,44 @@ a {
         justify-content: center;
     }
 }
+
+/* Language Switcher UI */
+.lang-switcher {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border: 1px solid #dce4ef;
+    border-radius: 20px;
+    background: #f8fafc;
+    transition: all 0.2s ease;
+}
+
+.lang-switcher:hover {
+    border-color: #1264d8;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(18, 100, 216, 0.08);
+}
+
+.globe-icon {
+    font-size: 14px;
+    line-height: 1;
+}
+
+.lang-select {
+    border: none;
+    background: transparent;
+    font-size: 13px;
+    font-weight: 700;
+    color: #12213a;
+    cursor: pointer;
+    outline: none;
+    padding-right: 4px;
+}
+
+.lang-select option {
+    background: #ffffff;
+    color: #12213a;
+    font-weight: 500;
+}
+
