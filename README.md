@@ -96,3 +96,28 @@ Preview:
 ```text
 http://localhost:8000/barcode-scanner-history/
 ```
+
+
+## Step 6
+
+Added:
+
+- `/zxing-intent-scanner/`
+- ZXing Intent developer SEO landing page
+- Homepage ZXing Intent feature card linked to the developer page
+- Homepage Developers section linked to the developer page
+- Android integration flow
+- Safe placeholder code examples for the Intent pattern
+- Internal links from existing feature pages
+- `data-page="zxing_intent"` on Google Play CTAs
+
+Important:
+
+The code example intentionally uses placeholder Intent action and result keys.
+Replace them only with the exact contract supported by the current Nemo app.
+
+Preview:
+
+```text
+http://localhost:8000/zxing-intent-scanner/
+```

@@ -502,3 +502,63 @@ a {
         grid-template-columns: 1fr;
     }
 }
+
+
+.code-block {
+    margin: 28px 0 0;
+    padding: 22px;
+    overflow-x: auto;
+    border: 1px solid #dfe6ef;
+    border-radius: 14px;
+    background: #0f172a;
+    color: #e5edf7;
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        Menlo,
+        monospace;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.code-block code {
+    white-space: pre;
+}
+
+.notice {
+    margin-top: 24px;
+    padding: 18px 20px;
+    border-left: 4px solid #1264d8;
+    border-radius: 10px;
+    background: #eef5ff;
+    color: #35445a;
+}
+
+.developer-flow {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+    align-items: center;
+    margin-top: 34px;
+}
+
+.developer-flow .workflow-item {
+    min-height: 82px;
+    display: grid;
+    place-items: center;
+}
+
+.developer-flow .workflow-arrow {
+    text-align: center;
+}
+
+@media (max-width: 760px) {
+    .developer-flow {
+        grid-template-columns: 1fr;
+    }
+
+    .developer-flow .workflow-arrow {
+        transform: rotate(90deg);
+    }
+}

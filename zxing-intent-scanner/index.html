@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ZXing Intent Compatible Barcode Scanner for Android | Nemo</title>
+    <meta
+        name="description"
+        content="Use Nemo as an external barcode scanner from an Android app with a ZXing-compatible Intent workflow and receive scan results back in your app."
+    >
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="../" class="logo">Nemo</a>
+
+        <nav class="nav">
+            <a href="../#features">Features</a>
+            <a href="./">Developers</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <section class="page-hero">
+        <div class="container page-hero-inner">
+
+            <a href="../" class="back-home">← Back to Nemo</a>
+
+            <p class="eyebrow">ZXing Intent Compatible</p>
+
+            <h1>
+                Use Nemo as an external
+                barcode scanner for Android.
+            </h1>
+
+            <p>
+                Your Android app can launch a compatible scanner,
+                let the user scan a barcode or QR code
+                and receive the result back in the calling app.
+            </p>
+
+            <div class="page-hero-actions">
+                <a
+                    class="button button-primary play-store-cta"
+                    data-page="zxing_intent"
+                    href="https://play.google.com/store/apps/details?id=kr.co.bizadmin.scanner"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Try Nemo with ZXing Intent
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container content-narrow">
+
+            <p class="eyebrow">The problem</p>
+
+            <h2>
+                Your app needs scanning, but you may not want to build a scanner from scratch
+            </h2>
+
+            <p>
+                Some Android workflows only need a reliable way to launch a scanner,
+                capture a barcode or QR code and return the value to the original app.
+                Rebuilding camera handling, recognition and result delivery can add
+                unnecessary complexity when an external scanner already fits the workflow.
+            </p>
+
+        </div>
+    </section>
+
+    <section class="content-section workflow-section">
+        <div class="container">
+
+            <div class="section-heading">
+                <p class="eyebrow">Integration flow</p>
+                <h2>Launch, scan and receive the result</h2>
+            </div>
+
+            <div class="developer-flow">
+                <div class="workflow-item">Your App</div>
+                <div class="workflow-arrow">→</div>
+                <div class="workflow-item">Intent</div>
+                <div class="workflow-arrow">→</div>
+                <div class="workflow-item">Nemo</div>
+            </div>
+
+            <div class="developer-flow">
+                <div class="workflow-item">Nemo</div>
+                <div class="workflow-arrow">→</div>
+                <div class="workflow-item">Scan Result</div>
+                <div class="workflow-arrow">→</div>
+                <div class="workflow-item">Your App</div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container content-narrow">
+
+            <p class="eyebrow">Android example</p>
+
+            <h2>
+                Keep the integration code simple
+            </h2>
+
+            <p>
+                The exact Intent action, extras and result keys must match
+                the interface supported by the installed Nemo version.
+                Use the structure below as an integration pattern,
+                then replace the placeholder values with Nemo's published contract.
+            </p>
+
+            <pre class="code-block"><code>Intent intent = new Intent("YOUR_SUPPORTED_SCAN_ACTION");
+
+// Optional examples — use only values supported by Nemo.
+// intent.putExtra("SCAN_MODE", "QR_CODE_MODE");
+
+startActivityForResult(intent, REQUEST_SCAN);</code></pre>
+
+            <pre class="code-block"><code>@Override
+protected void onActivityResult(
+        int requestCode,
+        int resultCode,
+        Intent data
+) {
+    super.onActivityResult(requestCode, resultCode, data);
+
+    if (requestCode == REQUEST_SCAN && resultCode == RESULT_OK) {
+        // Replace this key with Nemo's documented result key.
+        String result = data.getStringExtra("YOUR_RESULT_KEY");
+
+        // Use the scanned value in your app.
+    }
+}</code></pre>
+
+            <div class="notice">
+                Do not copy placeholder action names or result keys into production.
+                Publish only the exact Intent contract that the current Nemo app actually supports.
+            </div>
+
+        </div>
+    </section>
+
+    <section class="content-section workflow-section">
+        <div class="container">
+
+            <div class="section-heading">
+                <p class="eyebrow">Why this matters</p>
+                <h2>A scanner can become part of a larger workflow</h2>
+            </div>
+
+            <div class="use-case-grid">
+
+                <article class="use-case-card">
+                    <h3>Business apps</h3>
+                    <p>
+                        Launch scanning from an existing Android workflow
+                        instead of asking users to switch apps manually.
+                    </p>
+                </article>
+
+                <article class="use-case-card">
+                    <h3>ERP or inventory tools</h3>
+                    <p>
+                        Receive a scanned value back in the calling app
+                        and continue the work with that result.
+                    </p>
+                </article>
+
+                <article class="use-case-card">
+                    <h3>Legacy ZXing workflows</h3>
+                    <p>
+                        Support external-scanner patterns used by apps
+                        that already depend on Intent-based scanning.
+                    </p>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container content-narrow">
+
+            <p class="eyebrow">Related features</p>
+
+            <h2>
+                Nemo also supports standalone scanning workflows
+            </h2>
+
+            <p>
+                Developers can use the integration feature while end users
+                can still benefit from continuous scanning, scan history,
+                image scanning and CSV export inside Nemo itself.
+            </p>
+
+            <div class="related-links">
+                <a href="../continuous-barcode-scanner/">
+                    Continuous barcode scanning →
+                </a>
+
+                <a href="../barcode-scanner-csv-export/">
+                    CSV export →
+                </a>
+
+                <a href="../scan-qr-from-image/">
+                    Scan QR from image →
+                </a>
+
+                <a href="../barcode-scanner-history/">
+                    Scan history →
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section final-cta">
+        <div class="container">
+
+            <h2>Need an external scanner for your Android workflow?</h2>
+
+            <p>
+                Install Nemo and test the supported Intent integration with your app.
+            </p>
+
+            <a
+                class="button button-primary play-store-cta"
+                data-page="zxing_intent"
+                href="https://play.google.com/store/apps/details?id=kr.co.bizadmin.scanner"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Get Nemo on Google Play
+            </a>
+
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <strong>Nemo</strong>
+        <span>Barcode & QR Scanner</span>
+    </div>
+</footer>
+
+<script src="../js/main.js"></script>
+
+</body>
+</html>
