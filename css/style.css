@@ -403,25 +403,81 @@ a {
 }
 
 .page-hero-inner {
-    width: 100%;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 60px;
 }
 
 .page-hero h1 {
     margin: 0;
-    font-size: clamp(46px, 7vw, 72px);
-    line-height: 1.04;
-    letter-spacing: -0.05em;
+    font-size: clamp(40px, 5.5vw, 64px);
+    line-height: 1.06;
+    letter-spacing: -0.045em;
 }
 
 .page-hero p {
-    max-width: 860px;
-    margin: 24px 0 0;
+    margin: 20px 0 0;
     color: #5f6e84;
-    font-size: 19px;
+    font-size: 18px;
 }
 
 .page-hero-actions {
-    margin-top: 30px;
+    margin-top: 28px;
+}
+
+/* Subpage Visual Preview Cards */
+.subpage-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.subpage-card {
+    width: 100%;
+    max-width: 440px;
+    padding: 24px;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 0 20px 50px rgba(12, 18, 32, 0.08);
+}
+
+.subpage-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 14px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #f1f5f9;
+    font-weight: 800;
+    font-size: 14px;
+    color: #1e293b;
+}
+
+.subpage-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-item {
+    padding: 12px 14px;
+    border-radius: 10px;
+    background: #f8fafc;
+    border: 1px solid #edf2f7;
+    font-size: 13px;
+    color: #334155;
+}
+
+.code-snippet {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 12px;
+    background: #0f172a;
+    color: #38bdf8;
+    padding: 18px;
+    border-radius: 12px;
+    overflow-x: auto;
+    line-height: 1.5;
 }
 
 .content-section {
@@ -703,5 +759,12 @@ a {
     background: #ffffff;
     color: #12213a;
     font-weight: 500;
+}
+
+@media (max-width: 800px) {
+    .page-hero-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
 }
 

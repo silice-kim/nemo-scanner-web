@@ -55,29 +55,39 @@
     <section class="page-hero">
         <div class="container page-hero-inner">
 
-            <a href="../" class="back-home" data-i18n="back_to_nemo">← Back to Nemo</a>
+            <div>
+                <a href="../" class="back-home" data-i18n="back_to_nemo">← Back to Nemo</a>
 
-            <p class="eyebrow" data-i18n="feat_intent_title">ZXing Intent</p>
+                <p class="eyebrow" data-i18n="feat_intent_title">ZXing Intent</p>
 
-            <h1 data-i18n="intent_hero_title">
-                ZXing Intent Integration for Android Developers.
-            </h1>
+                <h1 data-i18n="intent_hero_title">
+                    ZXing Intent Integration for Android Developers.
+                </h1>
 
-            <p data-i18n="intent_hero_desc">
-                Easily invoke Nemo scanner from your custom Android application using standard ZXing Intent actions.
-            </p>
+                <p data-i18n="intent_hero_desc">
+                    Easily invoke Nemo scanner from your custom Android application using standard ZXing Intent actions.
+                </p>
 
-            <div class="page-hero-actions">
-                <a
-                    class="button button-primary play-store-cta"
-                    data-page="developers"
-                    href="https://play.google.com/store/apps/details?id=kr.co.bizadmin.scanner"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    data-i18n="get_nemo"
-                >
-                    Get Nemo on Google Play
-                </a>
+                <div class="page-hero-actions">
+                    <a
+                        class="button button-primary play-store-cta"
+                        data-page="developers"
+                        href="https://play.google.com/store/apps/details?id=kr.co.bizadmin.scanner"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-i18n="get_nemo"
+                    >
+                        Get Nemo on Google Play
+                    </a>
+                </div>
+            </div>
+
+            <div class="subpage-visual">
+                <div class="code-snippet">
+<span style="color:#c678dd;">Intent</span> intent = <span style="color:#c678dd;">new</span> Intent(<span style="color:#98c379;">"com.google.zxing.client.android.SCAN"</span>);<br>
+intent.putExtra(<span style="color:#98c379;">"SCAN_MODE"</span>, <span style="color:#98c379;">"BAR_CODE_MODE"</span>);<br>
+startActivityForResult(intent, <span style="color:#d19a66;">0</span>);
+                </div>
             </div>
 
         </div>

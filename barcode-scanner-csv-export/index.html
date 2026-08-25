@@ -55,32 +55,48 @@
     <section class="page-hero">
         <div class="container page-hero-inner">
 
-            <a href="../" class="back-home" data-i18n="back_to_nemo">← Back to Nemo</a>
+            <div>
+                <a href="../" class="back-home" data-i18n="back_to_nemo">← Back to Nemo</a>
 
-            <p class="eyebrow" data-i18n="feat_csv_title">CSV Export</p>
+                <p class="eyebrow" data-i18n="feat_csv_title">CSV Export</p>
 
-            <h1 data-i18n="csv_hero_title">
-                Export barcode scan results
-                directly to CSV.
-            </h1>
+                <h1 data-i18n="csv_hero_title">
+                    Export barcode scan results
+                    directly to CSV.
+                </h1>
 
-            <p data-i18n="csv_hero_desc">
-                Scanning codes is only half the work.
-                Nemo lets you export your scan history into CSV files,
-                making it easy to work with Excel, Google Sheets, or internal inventory tools.
-            </p>
+                <p data-i18n="csv_hero_desc">
+                    Scanning codes is only half the work.
+                    Nemo lets you export your scan history into CSV files,
+                    making it easy to work with Excel, Google Sheets, or internal inventory tools.
+                </p>
 
-            <div class="page-hero-actions">
-                <a
-                    class="button button-primary play-store-cta"
-                    data-page="csv_export"
-                    href="https://play.google.com/store/apps/details?id=kr.co.bizadmin.scanner"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    data-i18n="get_nemo"
-                >
-                    Get Nemo on Google Play
-                </a>
+                <div class="page-hero-actions">
+                    <a
+                        class="button button-primary play-store-cta"
+                        data-page="csv_export"
+                        href="https://play.google.com/store/apps/details?id=kr.co.bizadmin.scanner"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-i18n="get_nemo"
+                    >
+                        Get Nemo on Google Play
+                    </a>
+                </div>
+            </div>
+
+            <div class="subpage-visual">
+                <div class="subpage-card">
+                    <div class="subpage-card-header">
+                        <span>📊 export_scans.csv</span>
+                        <span style="color:#10b981;">Ready</span>
+                    </div>
+                    <div class="subpage-card-body">
+                        <div class="card-item" style="font-family: monospace;">Timestamp, Barcode, Format</div>
+                        <div class="card-item" style="font-family: monospace;">16:45:10, 8801234567, EAN_13</div>
+                        <div class="card-item" style="font-family: monospace;">16:45:14, https://nemo.kr, QR_CODE</div>
+                    </div>
+                </div>
             </div>
 
         </div>
