@@ -1,7 +1,7 @@
 (function () {
     const SUPPORTED_LANGS = {
-        "en": "English",
         "ko": "한국어",
+        "en": "English",
         "ja": "日本語",
         "de": "Deutsch",
         "es": "Español",
@@ -11,7 +11,7 @@
         "zh-TW": "繁體中文"
     };
 
-    function getInitialLanguage() {
+    function detectUserLanguage() {
         const urlParams = new URLSearchParams(window.location.search);
         const langParam = urlParams.get('lang');
         if (langParam && SUPPORTED_LANGS[langParam]) {
@@ -24,20 +24,20 @@
             return savedLang;
         }
 
-        const userLang = navigator.language || navigator.userLanguage || '';
+        const userLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
         if (userLang.startsWith('ko')) return 'ko';
         if (userLang.startsWith('ja')) return 'ja';
         if (userLang.startsWith('de')) return 'de';
         if (userLang.startsWith('es')) return 'es';
         if (userLang.startsWith('fr')) return 'fr';
         if (userLang.startsWith('pt')) return 'pt';
-        if (userLang.toLowerCase() === 'zh-tw' || userLang.toLowerCase() === 'zh-hk' || userLang.toLowerCase() === 'zh-mo') return 'zh-TW';
+        if (userLang === 'zh-tw' || userLang === 'zh-hk' || userLang === 'zh-mo') return 'zh-TW';
         if (userLang.startsWith('zh')) return 'zh-CN';
 
-        return 'en';
+        return 'ko'; // Default fallback for domestic users if undetected
     }
 
-    let currentLang = getInitialLanguage();
+    let currentLang = detectUserLanguage();
 
     function setLanguage(lang) {
         if (!SUPPORTED_LANGS[lang]) return;
@@ -53,13 +53,11 @@
         const dict = window.translations ? window.translations[currentLang] : null;
         if (!dict) return;
 
-        // Title update if data-i18n-title is present on body or html
-        const pageTitleKey = document.body.getAttribute('data-i18n-page-title');
+        const pageTitleKey = document.body ? document.body.getAttribute('data-i18n-page-title') : null;
         if (pageTitleKey && dict[pageTitleKey]) {
             document.title = dict[pageTitleKey];
         }
 
-        // Update elements with data-i18n
         const elements = document.querySelectorAll('[data-i18n]');
         elements.forEach(el => {
             const key = el.getAttribute('data-i18n');
@@ -121,10 +119,16 @@
         updateSelectorUI();
     }
 
-    document.addEventListener('DOMContentLoaded', function () {
+    function init() {
         initLanguageSwitcherUI();
         setLanguage(currentLang);
-    });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
 
     window.i18nManager = {
         setLanguage: setLanguage,
