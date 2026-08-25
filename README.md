@@ -61,3 +61,20 @@ Preview:
 ```text
 http://localhost:8000/barcode-scanner-csv-export/
 ```
+
+
+## Step 4
+
+Added:
+
+- `/scan-qr-from-image/`
+- Scan from Image SEO landing page
+- Homepage Image Scan card linked to the new page
+- Internal links between existing feature pages
+- `data-page="image_scan"` on Google Play CTAs
+
+Preview:
+
+```text
+http://localhost:8000/scan-qr-from-image/
+```
