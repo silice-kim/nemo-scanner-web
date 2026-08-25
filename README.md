@@ -43,3 +43,21 @@ Preview:
 ```text
 http://localhost:8000/continuous-barcode-scanner/
 ```
+
+
+## Step 3
+
+Added:
+
+- `/barcode-scanner-csv-export/`
+- CSV Export SEO landing page
+- Homepage CSV Export card linked to the new page
+- Continuous Scan → CSV Export internal link
+- CSV Export → Continuous Scan internal link
+- `data-page="csv_export"` on Google Play CTAs
+
+Preview:
+
+```text
+http://localhost:8000/barcode-scanner-csv-export/
+```
