@@ -34,7 +34,7 @@
         if (userLang === 'zh-tw' || userLang === 'zh-hk' || userLang === 'zh-mo') return 'zh-TW';
         if (userLang.startsWith('zh')) return 'zh-CN';
 
-        return 'ko'; // Default fallback for domestic users if undetected
+        return 'ko'; // Default fallback
     }
 
     let currentLang = detectUserLanguage();
@@ -47,15 +47,18 @@
 
         updateDOM();
         updateSelectorUI();
+        preserveLangInLinks();
     }
 
     function updateDOM() {
         const dict = window.translations ? window.translations[currentLang] : null;
         if (!dict) return;
 
-        const pageTitleKey = document.body ? document.body.getAttribute('data-i18n-page-title') : null;
-        if (pageTitleKey && dict[pageTitleKey]) {
-            document.title = dict[pageTitleKey];
+        if (document.body) {
+            const pageTitleKey = document.body.getAttribute('data-i18n-page-title');
+            if (pageTitleKey && dict[pageTitleKey]) {
+                document.title = dict[pageTitleKey];
+            }
         }
 
         const elements = document.querySelectorAll('[data-i18n]');
@@ -75,6 +78,22 @@
         const selectors = document.querySelectorAll('.lang-select');
         selectors.forEach(select => {
             select.value = currentLang;
+        });
+    }
+
+    function preserveLangInLinks() {
+        // Automatically append ?lang=currentLang to internal links
+        const links = document.querySelectorAll('a[href]');
+        links.forEach(a => {
+            const href = a.getAttribute('href');
+            if (href && !href.startsWith('http') && !href.startsWith('#') && !href.startsWith('mailto')) {
+                try {
+                    const url = new URL(href, window.location.href);
+                    url.searchParams.set('lang', currentLang);
+                    const relativePath = url.pathname + url.search;
+                    a.setAttribute('href', relativePath);
+                } catch (e) {}
+            }
         });
     }
 
