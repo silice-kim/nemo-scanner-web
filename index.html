@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body data-i18n-page-title="cont_page_title">
+<body>
 
 <header class="site-header">
     <div class="container header-inner">
@@ -114,9 +114,9 @@
         <div class="container">
 
             <div class="section-heading">
-                <p class="eyebrow">Features</p>
+                <p class="eyebrow" data-i18n="features_eyebrow">Features</p>
                 <h2 data-i18n="features_title">More than a simple scanner</h2>
-                <p data-i18n="hero_desc">
+                <p data-i18n="features_subtitle">
                     From everyday QR scanning to repetitive barcode workflows,
                     Nemo helps you scan and use results efficiently.
                 </p>
@@ -128,38 +128,72 @@
                     <div class="feature-icon">▦</div>
                     <h3 data-i18n="feat_continuous_title">Continuous Scan</h3>
                     <p data-i18n="feat_continuous_desc">Scan multiple barcodes without restarting the scanner.</p>
-                    <span class="feature-link">Learn more →</span>
+                    <span class="feature-link" data-i18n="learn_more">Learn more →</span>
                 </a>
 
                 <a class="feature-card" href="barcode-scanner-csv-export/">
                     <div class="feature-icon">CSV</div>
                     <h3 data-i18n="feat_csv_title">CSV Export</h3>
                     <p data-i18n="feat_csv_desc">Export scan results and use them in spreadsheets.</p>
-                    <span class="feature-link">Learn more →</span>
+                    <span class="feature-link" data-i18n="learn_more">Learn more →</span>
                 </a>
 
                 <a class="feature-card" href="scan-qr-from-image/">
                     <div class="feature-icon">▧</div>
                     <h3 data-i18n="feat_image_title">Scan from Image</h3>
                     <p data-i18n="feat_image_desc">Read QR codes and barcodes from saved images.</p>
-                    <span class="feature-link">Learn more →</span>
+                    <span class="feature-link" data-i18n="learn_more">Learn more →</span>
                 </a>
 
                 <a class="feature-card" href="barcode-scanner-history/">
                     <div class="feature-icon">◷</div>
                     <h3 data-i18n="feat_history_title">Scan History</h3>
                     <p data-i18n="feat_history_desc">Save, search and review previous scan results.</p>
-                    <span class="feature-link">Learn more →</span>
+                    <span class="feature-link" data-i18n="learn_more">Learn more →</span>
                 </a>
 
                 <a class="feature-card" href="zxing-intent-scanner/">
                     <div class="feature-icon">&lt;/&gt;</div>
                     <h3 data-i18n="feat_intent_title">ZXing Intent</h3>
                     <p data-i18n="feat_intent_desc">Call Nemo from another Android app and receive scan results.</p>
-                    <span class="feature-link">Developer guide →</span>
+                    <span class="feature-link" data-i18n="dev_guide">Developer guide →</span>
                 </a>
 
             </div>
+        </div>
+    </section>
+
+    <section class="section workflow-section">
+        <div class="container">
+            <div class="section-heading">
+                <p class="eyebrow" data-i18n="workflow_eyebrow">Workflow</p>
+                <h2 data-i18n="workflow_title">Scan and use your results</h2>
+            </div>
+
+            <div class="workflow-row">
+                <div class="workflow-item" data-i18n="wf_scan">Scan</div>
+                <div class="workflow-arrow">→</div>
+                <div class="workflow-item" data-i18n="wf_save">Save</div>
+                <div class="workflow-arrow">→</div>
+                <div class="workflow-item" data-i18n="wf_search">Search</div>
+                <div class="workflow-arrow">→</div>
+                <div class="workflow-item" data-i18n="wf_export">Export</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section developer-section" id="developers">
+        <div class="container developer-inner">
+            <p class="eyebrow" data-i18n="for_developers">For Developers</p>
+            <h2 data-i18n="zxing_compat_title">ZXing Intent compatible</h2>
+            <p data-i18n="zxing_compat_desc">
+                Use Nemo as an external barcode scanner
+                from your Android application.
+            </p>
+
+            <a href="zxing-intent-scanner/" class="text-link" data-i18n="zxing_compat_link">
+                Learn about ZXing Intent integration →
+            </a>
         </div>
     </section>
 
