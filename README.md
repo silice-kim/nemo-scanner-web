@@ -78,3 +78,21 @@ Preview:
 ```text
 http://localhost:8000/scan-qr-from-image/
 ```
+
+
+## Step 5
+
+Added:
+
+- `/barcode-scanner-history/`
+- Scan History SEO landing page
+- Homepage Scan History card linked to the new page
+- Internal links from Continuous Scan, CSV Export and Image Scan
+- History page links back to related feature pages
+- `data-page="history"` on Google Play CTAs
+
+Preview:
+
+```text
+http://localhost:8000/barcode-scanner-history/
+```
