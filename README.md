@@ -4,67 +4,52 @@ Marketing website for **Barcode & QR Scanner: Nemo**.
 
 Live site:
 
-https://silice-kim.github.io/nemo-scanner-web/
+https://nemo-scanner.bizadmin.co.kr/
 
 Google Play:
 
 https://play.google.com/store/apps/details?id=kr.co.bizadmin.scanner
 
-## Day 24 final / Step 7
+## Custom domain version
 
-Implemented:
+This build is configured for:
 
-- Responsive home page
-- Continuous Scan SEO landing page
-- CSV Export SEO landing page
-- Scan from Image SEO landing page
-- Scan History SEO landing page
-- ZXing Intent developer landing page
-- Unified desktop/mobile navigation
-- Unified footer and internal links
-- Google Play CTA tracking attributes
-- Page-specific titles and meta descriptions
-- Canonical URLs using the live GitHub Pages domain
-- Open Graph title, description, URL and site name
-- `robots.txt`
-- `sitemap.xml`
-- `404.html`
-- Removal of temporary “coming next” copy
+```text
+nemo-scanner.bizadmin.co.kr
+```
+
+Included:
+
+- `CNAME`
+- Canonical URLs on the custom domain
+- Open Graph URLs on the custom domain
+- `robots.txt` pointing to the custom-domain sitemap
+- `sitemap.xml` using the custom domain
+- `404.html` absolute links updated to the custom domain
 
 ## Pages
 
-- `/`
-- `/continuous-barcode-scanner/`
-- `/barcode-scanner-csv-export/`
-- `/scan-qr-from-image/`
-- `/barcode-scanner-history/`
-- `/zxing-intent-scanner/`
+- `https://nemo-scanner.bizadmin.co.kr/`
+- `https://nemo-scanner.bizadmin.co.kr/continuous-barcode-scanner/`
+- `https://nemo-scanner.bizadmin.co.kr/barcode-scanner-csv-export/`
+- `https://nemo-scanner.bizadmin.co.kr/scan-qr-from-image/`
+- `https://nemo-scanner.bizadmin.co.kr/barcode-scanner-history/`
+- `https://nemo-scanner.bizadmin.co.kr/zxing-intent-scanner/`
 
-## Local preview
+## GitHub Pages custom domain checklist
 
-```bash
-python3 -m http.server 8000
-```
-
-Open:
+1. Push this build to the repository.
+2. Confirm repository root contains `CNAME`.
+3. In GitHub Pages settings, set Custom domain to:
 
 ```text
-http://localhost:8000/
+nemo-scanner.bizadmin.co.kr
 ```
 
-## Deployment check
-
-After pushing to GitHub, verify:
-
-- `https://silice-kim.github.io/nemo-scanner-web/`
-- `https://silice-kim.github.io/nemo-scanner-web/robots.txt`
-- `https://silice-kim.github.io/nemo-scanner-web/sitemap.xml`
-- all five landing pages
-- Google Play CTA links
-- mobile navigation
-- 404 handling
-
-## Important developer note
-
-The ZXing Intent page contains placeholder Intent action/result keys.
-Replace those placeholders only with the exact contract supported by the current Nemo app.
+4. Enable HTTPS when available.
+5. Verify DNS points to the GitHub Pages hostname.
+6. Confirm:
+   - `/robots.txt`
+   - `/sitemap.xml`
+   - all landing pages
+   - Google Play CTA links
