@@ -84,27 +84,56 @@
             </div>
 
             <div class="scanner-preview" aria-label="Nemo scanner preview">
-                <div class="phone-frame">
+                <div class="scanner-device">
+                    <div class="device-status-bar">
+                        <span class="device-time">09:41</span>
+                        <div class="device-indicators">
+                            <span class="indicator-icon">5G</span>
+                            <span class="indicator-icon">●●●</span>
+                        </div>
+                    </div>
                     <div class="phone-screen">
                         <div class="camera-area">
-                            <div class="scan-line"></div>
-                            <div class="barcode-box">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
+                            <div class="reticle-box">
+                                <span class="reticle-corner corner-tl"></span>
+                                <span class="reticle-corner corner-tr"></span>
+                                <span class="reticle-corner corner-bl"></span>
+                                <span class="reticle-corner corner-br"></span>
+                                <div class="laser-scanner"></div>
+                                <div class="barcode-target">
+                                    <div class="barcode-lines">
+                                        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                    </div>
+                                    <span class="barcode-number">8 801234 567890</span>
+                                </div>
+                            </div>
+                            <div class="scan-hud">
+                                <span class="hud-pill"><span class="hud-pulse"></span> LIVE OPTICAL ENGINE</span>
                             </div>
                         </div>
 
                         <div class="history-preview">
-                            <strong data-i18n="scan_history_title">Scan History</strong>
-                            <div>123456789012</div>
-                            <div>8801234567890</div>
-                            <div>https://example.com</div>
+                            <div class="history-header">
+                                <strong data-i18n="scan_history_title">Scan History</strong>
+                                <span class="history-badge">READY</span>
+                            </div>
+                            <div class="history-list">
+                                <div class="history-item">
+                                    <span class="history-icon">▦</span>
+                                    <span class="history-val">123456789012</span>
+                                    <span class="history-tag">EAN-13</span>
+                                </div>
+                                <div class="history-item">
+                                    <span class="history-icon">▦</span>
+                                    <span class="history-val">8801234567890</span>
+                                    <span class="history-tag">CODE-128</span>
+                                </div>
+                                <div class="history-item">
+                                    <span class="history-icon">▧</span>
+                                    <span class="history-val">https://example.com</span>
+                                    <span class="history-tag">QR Code</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -186,17 +215,35 @@
     </section>
 
     <section class="section developer-section" id="developers">
-        <div class="container developer-inner">
-            <p class="eyebrow" data-i18n="for_developers">For Developers</p>
-            <h2 data-i18n="zxing_compat_title">ZXing Intent compatible</h2>
-            <p data-i18n="zxing_compat_desc">
-                Use Nemo as an external barcode scanner
-                from your Android application.
-            </p>
+        <div class="container developer-grid">
+            <div class="developer-inner">
+                <p class="eyebrow" data-i18n="for_developers">For Developers</p>
+                <h2 data-i18n="zxing_compat_title">ZXing Intent compatible</h2>
+                <p data-i18n="zxing_compat_desc">
+                    Use Nemo as an external barcode scanner
+                    from your Android application.
+                </p>
 
-            <a href="zxing-intent-scanner/" class="text-link" data-i18n="zxing_compat_link">
-                Learn about ZXing Intent integration →
-            </a>
+                <a href="zxing-intent-scanner/" class="text-link" data-i18n="zxing_compat_link">
+                    Learn about ZXing Intent integration →
+                </a>
+            </div>
+
+            <div class="code-preview-window">
+                <div class="code-header">
+                    <div class="code-dots">
+                        <span class="code-dot red"></span>
+                        <span class="code-dot yellow"></span>
+                        <span class="code-dot green"></span>
+                    </div>
+                    <span class="code-title">MainActivity.java</span>
+                </div>
+                <pre class="code-body"><code>IntentIntegrator integrator = new IntentIntegrator(this);
+integrator.setPackage("kr.co.bizadmin.scanner");
+integrator.setPrompt("Scan with Nemo");
+integrator.setOrientationLocked(false);
+integrator.initiateScan();</code></pre>
+            </div>
         </div>
     </section>
 
