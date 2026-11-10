@@ -1025,6 +1025,45 @@ a:focus-visible, button:focus-visible, select:focus-visible {
     font-size: 14px;
 }
 
+.code-snippet {
+    width: 100%;
+    max-width: 480px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    background: var(--bg-surface-dark);
+    color: #e2e8f0;
+    padding: 48px 22px 22px 22px;
+    border-radius: var(--radius-lg);
+    border: 1px solid #1e293b;
+    box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.4);
+    overflow-x: auto;
+    line-height: 1.65;
+    position: relative;
+}
+
+.code-snippet::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ef4444;
+    box-shadow: 16px 0 0 #f59e0b, 32px 0 0 #10b981;
+}
+
+.code-snippet::after {
+    content: "MainActivity.java";
+    position: absolute;
+    top: 15px;
+    left: 78px;
+    font-size: 11px;
+    color: #94a3b8;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
 .code-block {
     margin: 26px 0 0;
     padding: 20px;
